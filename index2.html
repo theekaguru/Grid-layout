@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f1f5f9;
+            padding: 2rem;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+            gap: 1rem;
+        }
+        .project{
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .featured{
+            grid-column: span 2;
+            background: #dbeafe;
+        }
+        .project h3{
+            margin: 0 0 0.5rem;
+        }
+        @media(max-width:600px){
+            .featured{
+                grid-column: span 1;
+            }
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <h2>My Project</h2>
+    <div class="grid">
+        <div class="project featured">
+            <h3>⭐Featured Project</h3>
+            <p>span two columns.Great for showcasing your work</p>
+        </div>
+        <div class="project"><h3>project 1</h3><p>some cool stuff</p></div>
+        <div class="project"><h3>project 2</h3><p>more cool stuff</p></div>
+        <div class="project"><h3>project 3</h3><p>yet still cool</p></div>
+
+    </div>
+    
+</body>
+</html>
